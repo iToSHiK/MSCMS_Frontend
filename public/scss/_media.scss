@@ -1,0 +1,291 @@
+@import "vars";
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media (max-width: 1440px){
+    .content__welcome{
+        &-text{
+            margin-top: 0px;
+        }
+        &-subtitle-block {
+            width: 100%;
+        }
+    }
+    .footer__inc {
+        padding: 0 100px;
+    }
+}
+
+@media (max-width: 1200px){
+ .sidebar{
+    flex:0 0 300px;
+    }
+    .footer__inc {
+        padding: 0;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media (max-width : 992px){
+    .nav {
+        &__bar {
+            padding: 20px 10px;
+            &-title {
+                font-size: 12px;
+            }
+        }
+    }
+    .header {
+        &__contact{
+            display: none;
+        }
+        &-logo {
+            display: flex;
+            justify-content: center;
+            &-img {
+                width: 18rem;
+            }
+        }
+    }
+    .main-flex{
+        display: block;
+    }
+    .sidebar{
+        display: none;
+    }
+    .content {
+        z-index: 99;
+        margin-left: 0px;
+        margin-top: 30px;
+        width: 100%;
+        &__donation-player-image {
+            display: none;
+        }
+    }
+    .footer{
+        margin-top: 100px;
+    }
+    .footer-flex {
+        margin-top: 100px;
+        flex-wrap: wrap;
+    }
+    .footer__links{
+        order:-1;
+    }
+    .mobile {
+        transition: all .3s;
+        display: block;
+        //height: 65px;
+        margin-top: -30px;
+        width: 100%;
+        background-image: url(img/welcome.png);
+        background-size: cover;
+        border-radius: 10px;
+        padding: 0px 20px;
+        &-link {
+            text-decoration: none;
+        }
+        &__menu {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 65px;
+            &-title {
+                color: $white;
+                font-weight: 700;
+                font-size: 20px;
+            }
+        }
+        &__burger {
+            display: flex;
+            align-items: center;
+            height: 40px;
+            width: 40px;
+            //background-color: black;
+        }
+        &-list {
+            transition: all .3s;
+        }
+        &-item {
+            padding: 20px 10px;
+            display: flex;
+            align-items: center;
+            &-text {
+                padding: 0px 10px;
+                font-weight: 700;
+                font-size: 20px;
+                color: $white;
+                &--pig{
+                    padding: 0px 19px;
+                }
+            }
+            &-img {
+                padding: 0px 20px;
+                border-right: 1px solid rgba(255,255,255,.5);
+                
+                &--pig {
+                    height: 40px;
+                    width: 81px;
+                }
+            }
+        }
+    }
+    .burger{
+        transition: all .3s;
+        content: "";
+        height: 3px;
+        width: 37px;
+        border-radius: 10px;
+        background-color: $white;
+        position: absolute;
+        &::after{
+            transition: all .3s;
+            content: "";
+            height: 3px;
+            width: 37px;
+            border-radius: 4px;
+            background-color: $white;
+            position: absolute;
+            margin-top: -10px;
+        }
+        &::before{
+            transition: all .3s;
+            content: "";
+            height: 3px;
+            width: 37px;
+            border-radius: 4px;
+            background-color: $white;
+            position: absolute;
+            margin-top: 10px;
+        }
+        &-active{
+            width: 0px;
+            &::after {
+                margin-top: 5px;
+                transform: rotate(45deg);
+            }
+            &::before {
+                transform: rotate(-45deg);
+                margin-top: 5px;
+            }
+        }
+    }
+}
+
+/* Small Devices, Tablets */
+@media (max-width : 768px){
+    .progress {
+        display: none;
+    }
+    .nav {
+        display: flex;
+        justify-content: center;
+        margin: 0 -19px;
+        &__home {
+            display: none;
+        }
+        &__bar {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            border-radius: 0px;
+            &-currency {
+                display: none;
+            }
+            &-title {
+                font-size: 12px;
+            }
+            &-cart {
+                border-left: none;
+            }
+        }
+    }
+    .content {
+        &__donation-player-image {
+            display: none;
+        }
+        &__warning {
+            display: none;
+        }
+        &-first-block {
+            display: block;
+        }
+        &__welcome {
+            width: 100%;
+        }
+        &__sale {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            &-img {
+                width: 80%;
+                margin-left: 0px;
+            }
+        }
+        &-second-block {
+            display: block;
+        }
+        &__information {
+            width: 100%;
+        }
+        &__payments {
+            display: none;
+        }
+    }
+    .footer {
+       &__about {
+           display: flex;
+           justify-content: center;
+           margin-bottom: 30px;
+       }
+    }
+}
+@media (max-width : 560px){
+    .footer {
+        &-flex{
+            display: block;
+        }
+    }
+}
+/* Extra Small Devices, Phones */
+@media (max-width : 480px){
+    .footer__inc-icon{
+        padding: 30px 10px;
+    }
+}
+
+/* Custom, iPhone Retina */
+@media (max-width : 320px){
+
+}
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media (min-width : 320px){
+
+}
+
+/* Extra Small Devices, Phones */
+@media (min-width : 480px){
+
+}
+
+/* Small Devices, Tablets */
+@media (min-width : 768px){
+
+}
+
+/* Medium Devices, Desktops */
+@media (min-width : 992px){
+
+}
+
+/* Large Devices, Wide Screens */
+@media (min-width : 1200px){
+
+}
+
+
